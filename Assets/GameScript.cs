@@ -36,8 +36,12 @@ public class GameScript : MonoBehaviour {
 	public Animator P1CheckoutLabelAnimator;
 	public Animator P2CheckoutLabelAnimator;
 
+    private TranslationObject translation;
+
     // Use this for initialization
     void Start () {
+
+        translation = TranslationLoader.getInstance().getTranslation();
 
         P1NAME = PlayerPrefs.GetString("P1NAME");
         P2NAME = PlayerPrefs.GetString("P2NAME");
@@ -56,12 +60,12 @@ public class GameScript : MonoBehaviour {
         if (PlayerPrefs.GetInt("turn") == 1)
         {
             p1turn = true;
-            TurnText.text = (P1NAME + "'s Turn");
+            TurnText.text = (P1NAME + this.translation.scenes.Game.Turn);
         }
         else
         {
             p1turn = false;
-            TurnText.text = (P2NAME + "'s Turn");
+            TurnText.text = (P2NAME + this.translation.scenes.Game.Turn);
         }
 
     }
@@ -112,14 +116,14 @@ public class GameScript : MonoBehaviour {
                         p1turn = false;
 
                         ScoreField.text = null;
-                        TurnText.text = (P2NAME + "'s turn");
+                        TurnText.text = (P2NAME + this.translation.scenes.Game.Turn);
                         return;
                     }
 					P1ScoreField.text = P1ScoreField.text + System.Environment.NewLine + "             " + hit + System.Environment.NewLine + P1score;
                     p1turn = false;
 
                     ScoreField.text = null;
-                    TurnText.text = (P2NAME + "'s Turn");
+                    TurnText.text = (P2NAME + this.translation.scenes.Game.Turn);
 
 					if (findCheckout(P1score) != null)
 					{
@@ -158,13 +162,13 @@ public class GameScript : MonoBehaviour {
                         p1turn = true;
 
                         ScoreField.text = null;
-						TurnText.text = (P1NAME + "'s turn");
+						TurnText.text = (P1NAME + this.translation.scenes.Game.Turn);
                         return;
                     }
 					P2ScoreField.text = P2ScoreField.text + System.Environment.NewLine + "             " + hit + System.Environment.NewLine + P2score;
                     p1turn = true;
                     ScoreField.text = null;
-					TurnText.text = (P1NAME + "'s turn");
+					TurnText.text = (P1NAME + this.translation.scenes.Game.Turn);
 
 					if (findCheckout(P2score) != null)
 					{
@@ -190,7 +194,7 @@ public class GameScript : MonoBehaviour {
         WinGame.gameObject.SetActive(true);
         if (p1won)
         {
-            P1NAMELABELWON.text = P1NAME + System.Environment.NewLine + "Won!";
+            P1NAMELABELWON.text = P1NAME + System.Environment.NewLine + this.translation.scenes.Game.Won + "!";
             this.p1won = true;
             if (PlayerPrefs.GetInt("p1legswon") > 1)
             {
@@ -204,7 +208,7 @@ public class GameScript : MonoBehaviour {
         }
         else
         {
-            P1NAMELABELWON.text = P2NAME + System.Environment.NewLine + "Won!";
+            P1NAMELABELWON.text = P2NAME + System.Environment.NewLine + this.translation.scenes.Game.Won + "!";
             this.p1won = false;
             if (PlayerPrefs.GetInt("p2legswon") > 1)
             {

@@ -28,6 +28,7 @@ public class MainScript : MonoBehaviour {
     public void newGame()
     {
         SceneManager.LoadScene("newGameScene");
+		Debug.Log("AAAAAAA");
     }
 
     public void beginGame()

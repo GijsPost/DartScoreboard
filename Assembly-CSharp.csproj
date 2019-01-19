@@ -54,6 +54,9 @@
      <Compile Include="Assets\OptionsValueLoader.cs" />
      <Compile Include="Assets\RecordsScript.cs" />
      <Compile Include="Assets\Saver.cs" />
+     <Compile Include="Assets\TextManager.cs" />
+     <Compile Include="Assets\TranslationLoader.cs" />
+     <Compile Include="Assets\TranslationObject.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

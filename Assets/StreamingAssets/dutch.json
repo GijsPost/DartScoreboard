@@ -1,0 +1,33 @@
+{
+    "language": "nederlands",
+    "scenes": {
+        "general": {
+            "backToMenu": "Terug naar Menu"
+        },
+        "Main": {
+            "Title": "Dart Scorebord",
+            "StartNewGame": "Begin Nieuw Spel",
+            "SeePreviousMatches": "Zie vorige spellen",
+            "Exit": "Afsluiten",
+            "MadeBy": "Gemaakt door"
+        },
+        "newGameScene": {
+            "EnterPlayerOneName": "Vul de naam van speler 1 in",
+            "EnterPlayerTwoName": "Vul de naam van speler 2 in",
+            "NameTooLong": "Naam is te lang",
+            "Begins": "Begint",
+            "StartingScore": "Beginscore",
+            "StartGame": "Start Spel"
+        },
+        "Game": {
+            "Turn": "'s Beurt",
+            "EnterScore": "Vul Score in",
+            "Won": "heeft Gewonnen",
+            "StartNewLeg": "Begin volgende Leg"
+        },
+        "Records": {
+            "PreviousMatches": "Vorige wedstrijden",
+            "ClearSaveFile": "Verwijder Geschiedenis"
+        }
+    }
+}

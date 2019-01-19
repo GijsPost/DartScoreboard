@@ -1,0 +1,33 @@
+{
+    "language": "english",
+    "scenes": {
+        "general": {
+            "backToMenu": "Back To Menu"
+        },
+        "Main": {
+            "Title": "Dart Scoreboard",
+            "StartNewGame": "Start New Game",
+            "SeePreviousMatches": "See Previous Matches",
+            "Exit": "Exit",
+            "MadeBy": "Made by"
+        },
+        "newGameScene": {
+            "EnterPlayerOneName": "Enter Player One's Name",
+            "EnterPlayerTwoName": "Enter Player Two's Name",
+            "NameTooLong": "Name is too long",
+            "Begins": "Begins",
+            "StartingScore": "Starting Score",
+            "StartGame": "Start Game"
+        },
+        "Game": {
+            "Turn": "'s Turn",
+            "EnterScore": "Enter Score",
+            "Won": "Won",
+            "StartNewLeg": "Start New Leg"
+        },
+        "Records": {
+            "PreviousMatches": "Previous Matches",
+            "ClearSaveFile": "Clear Save File"
+        }
+    }
+}
